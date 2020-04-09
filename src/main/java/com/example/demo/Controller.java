@@ -15,9 +15,9 @@ public class Controller {
     private MailSenderConfiger smtpMailSender;
 
     @RequestMapping("/")
-    public void sendMail() throws MessagingException {
+    public String sendMail() throws MessagingException {
 
-        smtpMailSender.send("ah.jr22@gmail.com", "Test mail from Spring", "Howdy");
+        return smtpMailSender.send("ah.jr22@gmail.com", "Test mail from Spring", "Howdy");
 
     }
 
