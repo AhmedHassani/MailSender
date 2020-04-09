@@ -24,6 +24,7 @@ public class MailSenderConfiger {
         helper.setTo(to);
         helper.setText(body, true);
         javaMailSender.send(message);
+        return "Sent massage !";
     }
 
 
