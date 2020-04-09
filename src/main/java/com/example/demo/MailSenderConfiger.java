@@ -16,7 +16,7 @@ public class MailSenderConfiger {
     private JavaMailSender javaMailSender;
 
 
-    public void send(String to, String subject, String body) throws MessagingException {
+    public String send(String to, String subject, String body) throws MessagingException {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper;
         helper = new MimeMessageHelper(message, true);
